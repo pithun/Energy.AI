@@ -85,7 +85,7 @@ data = pd.DataFrame({'date': dates_to_forecast})
 
 # st.dataframe(dates)
 # st.write('here')
-#st.write(data)
+# st.write(data)
 
 # Modelling Features
 features = ['dayofyear', 'hour', 'dayofweek', 'quater', 'month', 'year']
@@ -93,7 +93,7 @@ features = ['dayofyear', 'hour', 'dayofweek', 'quater', 'month', 'year']
 # Opening Region data based on user input to get train data
 state_data_irr = pd.read_csv('data/irradiance/' + option_state + '.csv')
 state_data_temp_and_win = pd.read_csv('data/temperature_and_wind_speed/' + option_state + '.csv')
-#st.write(state_data_temp_and_win)
+# st.write(state_data_temp_and_win)
 
 # Getting the dependent(y) and Independent(x) Variables
 # Irradiance
@@ -112,11 +112,21 @@ y_win = state_data_temp_and_win['WS10M']
 x_test = create_features_win(data)
 
 # Importing Models for Forecasting Purposes
-irrad_mod = joblib.load('models/Irradiance_model.joblib')
-temp_mod = joblib.load('models/Temperature_model.joblib')
-winsp_mod = joblib.load('models/Windspeed_model.joblib')
+# irrad_mod = joblib.load('models/Irradiance_model.joblib')
+# temp_mod = joblib.load('models/Temperature_model.joblib')
+# winsp_mod = joblib.load('models/Windspeed_model.joblib')
 
-# Fitting Models
+# Models
+irrad_mod = XGBRegressor(n_estimators=395, learning_rate=0.02828406037224474, max_depth=3,
+                         subsample=0.8752408834864964, colsample_bytree=0.6375911533996059, gamma=0.0766400117771738,
+                         min_child_weight=8)
+temp_mod = XGBRegressor(n_estimators=366, learning_rate=0.012716050554512373, max_depth=5,
+                        subsample=0.6424680363348918, colsample_bytree=0.7017502705276655, gamma=0.03606422035411484,
+                        min_child_weight=6)
+winsp_mod = XGBRegressor(n_estimators=155, learning_rate=0.029780100863210306, max_depth=3,
+                         subsample=0.6693127271248768, colsample_bytree=0.9261762604295121, gamma=0.7120390789315135,
+                         min_child_weight=3)
+
 irrad_mod.fit(x_irr, y_irr)
 temp_mod.fit(x_temp, y_temp)
 winsp_mod.fit(x_win, y_win)
@@ -131,7 +141,7 @@ data['Clear Sky GHI'] = irrad_pred
 data['Temperature'] = temp_pred
 data['Wind_Speed'] = win_pred
 
-#st.dataframe(data)
+# st.dataframe(data)
 
 if option_PV_tech == tech[0]:
     k1, k2, k3, k4, k5, k6 = (-0.017237, -0.040465, -0.004702, 0.000149, 0.000170, 0.000005)
@@ -191,4 +201,3 @@ with col8:
     st.write('Poverty Level')
     st.progress(round(wealth_val), text=str(round(wealth_val)) + ' million poor people')
     # end_date = st.date_input('Enter End Date')
-
