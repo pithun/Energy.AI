@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="45df7647-10b3-4bb7-b1da-3a5531f7da95" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IT_companies_data/Company_data.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Images/LOGO.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Images/count_paid.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Images/count_states.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Streamlit_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Streamlit_app.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="00f86fe8-0188-4399-84d1-1b46447516c3" />
   <component name="ProjectId" id="2PkJvR4xSsL4cB6s7fapRZHDilJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -38,7 +41,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683995375246</updated>
-      <workItem from="1683995377542" duration="17056000" />
+      <workItem from="1683995377542" duration="17397000" />
     </task>
     <servers />
   </component>

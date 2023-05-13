@@ -18,6 +18,10 @@ from Functions import create_features_irr, create_features_win
 from PIL import Image
 import plotly_express as px
 
+# Model
+from xgboost import XGBRegressor
+import xgboost
+
 # Automation
 import joblib
 
