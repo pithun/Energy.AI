@@ -65,14 +65,8 @@ st.write('How to use app: '
          'residential panel).'
          '\n 3. Select forecast duration.'
          '\n 4. Visualize Forecast and Power Output Graphs below.'
-<<<<<<< HEAD
          '\n 5. Visualize the Indicators showing the Percentage of People who need Electricity and the amount of Poor'
          ' People in the State.')
-=======
-         '\n 5. Visualize the Indicators showing the Percent of People who need Electricity and the amount of Poor'
-         'People in the State.')
->>>>>>> 59190cd4aff790be59665ccf9856ce9ddf3bbc3d
-
 # Selecting Preferred Technology
 option_state = st.selectbox('Search or Scroll to Select a State', options=states)
 option_PV_tech = st.selectbox('What\'s your preferred technology of Panel ?', options=tech)
