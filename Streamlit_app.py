@@ -127,9 +127,17 @@ winsp_mod = XGBRegressor(n_estimators=155, learning_rate=0.029780100863210306, m
                          subsample=0.6693127271248768, colsample_bytree=0.9261762604295121, gamma=0.7120390789315135,
                          min_child_weight=3)
 
-irrad_mod.fit(x_irr, y_irr)
-temp_mod.fit(x_temp, y_temp)
-winsp_mod.fit(x_win, y_win)
+@st.cache_resource
+def mod_fit(_model, x, y):
+    return _model.fit(x, y)
+
+irrad_mod = mod_fit(irrad_mod, x_irr, y_irr)
+temp_mod = mod_fit(temp_mod, x_temp, y_temp)
+winsp_mod = mod_fit(winsp_mod, x_win, y_win)
+
+#irrad_mod.fit(x_irr, y_irr)
+#temp_mod.fit(x_temp, y_temp)
+#winsp_mod.fit(x_win, y_win)
 
 # Predictions
 irrad_pred = irrad_mod.predict(x_test)
