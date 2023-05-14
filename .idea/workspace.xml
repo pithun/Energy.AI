@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/Images/count_paid.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Images/count_states.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Streamlit_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/Streamlit_app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +41,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683995375246</updated>
-      <workItem from="1683995377542" duration="18813000" />
+      <workItem from="1683995377542" duration="19267000" />
     </task>
     <servers />
   </component>

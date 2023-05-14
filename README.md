@@ -1,2 +1,2 @@
-# InternSpot
-An app which contains RECENT Industrial Training Companies from the past set to make the search easier for the next sets.
+# Energy.AI
+An app which aids stakeholders find locations having good Solar Energy Potential.
