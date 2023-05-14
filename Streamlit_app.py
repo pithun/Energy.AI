@@ -62,9 +62,11 @@ states = ["Abia", "Adamawa", "Akwaibom", "Anambra", "Bauchi", "Bayelsa", "Benue"
 st.write('How to use app: '
          '\n 1. Select a State.'
          '\n 2. Select a Panel Technology (we produce output for just one Panel typically 1.6764x1.016m for a '
-         'residential panel.)'
+         'residential panel).'
          '\n 3. Select forecast duration.'
-         '\n 4. Visualize results below')
+         '\n 4. Visualize Forecast and Power Output Graphs below.'
+         '\n 5. Visualize the Indicators showing the Percent of People who need Electricity and the amount of Poor'
+         'People in the State.')
 
 # Selecting Preferred Technology
 option_state = st.selectbox('Search or Scroll to Select a State', options=states)
